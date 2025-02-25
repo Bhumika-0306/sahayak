@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/EmergencyContacts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".EmergencyActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="Emergency Contacts"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:id="@+id/emergencyGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleText"
+        android:layout_margin="8dp"
+        android:columnCount="2"
+        android:padding="8dp"
+        android:rowCount="2">
+
+        <!-- Police -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_border"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/polis" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Police"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/callPolice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="callPolice"
+                        android:padding="8dp"
+                        android:src="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/msgPolice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="messagePolice"
+                        android:padding="8dp"
+                        android:src="@drawable/message" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Fire -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_border"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/brigade" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Fire"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/callFire"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="callFire"
+                        android:padding="8dp"
+                        android:src="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/msgFire"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="messageFire"
+                        android:padding="8dp"
+                        android:src="@drawable/message" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ambulance -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_border"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ambu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Ambulance"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/callAmbulance"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="callAmbulance"
+                        android:padding="8dp"
+                        android:src="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/msgAmbulance"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="messageAmbulance"
+                        android:padding="8dp"
+                        android:src="@drawable/message" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Disaster Relief -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="@drawable/card_border"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/womennnnnnn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Women helpline"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/callDisaster"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="callDisaster"
+                        android:padding="8dp"
+                        android:src="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/msgDisaster"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:onClick="messageDisaster"
+                        android:padding="8dp"
+                        android:src="@drawable/message" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+
+    <Button
+        android:id="@+id/findSafeZonesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emergencyGrid"
+        android:layout_marginTop="24dp"
+        android:onClick="findSafeZones"
+        android:text="Find Nearest Safe Zone"
+        android:textSize="20sp" />
+    />
+
+    <Button
+        android:id="@+id/shareLocationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/findSafeZonesButton"
+        android:layout_marginTop="16dp"
+        android:onClick="sendLiveLocation"
+        android:text="Send Live Location" />
+
+
+</RelativeLayout>
+
+
+package com.example.sahayak_bhumika;
+
+
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+
+public class EmergencyActivity extends AppCompatActivity {
+
+    // Emergency Contact Numbers
+    private static final String POLICE_NUMBER = "100";
+    private static final String FIRE_NUMBER = "101";
+    private static final String AMBULANCE_NUMBER = "102";
+    private static final String WOMEN_HELPLINE_NUMBER = "1091";
+
+    // Emergency Messages
+    private static final String POLICE_MESSAGE = "Help! I need immediate police assistance.";
+    private static final String FIRE_MESSAGE = "Fire emergency! Need immediate help.";
+    private static final String AMBULANCE_MESSAGE = "Medical emergency! Need an ambulance.";
+    private static final String WOMEN_HELPLINE_MESSAGE = "I need help from the women helpline.";
+
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private FusedLocationProviderClient fusedLocationClient;
+    private String lastKnownLocation = "";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_emergency_contacts);
+
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        requestLocationPermission();
+
+        // Initialize Call & Message Buttons
+        ImageView callPolice = findViewById(R.id.callPolice);
+        ImageView msgPolice = findViewById(R.id.msgPolice);
+        ImageView callFire = findViewById(R.id.callFire);
+        ImageView msgFire = findViewById(R.id.msgFire);
+        ImageView callAmbulance = findViewById(R.id.callAmbulance);
+        ImageView msgAmbulance = findViewById(R.id.msgAmbulance);
+        ImageView callDisaster = findViewById(R.id.callDisaster);
+        ImageView msgDisaster = findViewById(R.id.msgDisaster);
+
+        // Set Click Listeners for Calling
+        callPolice.setOnClickListener(v -> makeCall(POLICE_NUMBER));
+        callFire.setOnClickListener(v -> makeCall(FIRE_NUMBER));
+        callAmbulance.setOnClickListener(v -> makeCall(AMBULANCE_NUMBER));
+        callDisaster.setOnClickListener(v -> makeCall(WOMEN_HELPLINE_NUMBER));
+
+        // Set Click Listeners for Messaging
+        msgPolice.setOnClickListener(v -> sendSMS(POLICE_NUMBER, POLICE_MESSAGE));
+        msgFire.setOnClickListener(v -> sendSMS(FIRE_NUMBER, FIRE_MESSAGE));
+        msgAmbulance.setOnClickListener(v -> sendSMS(AMBULANCE_NUMBER, AMBULANCE_MESSAGE));
+        msgDisaster.setOnClickListener(v -> sendSMS(WOMEN_HELPLINE_NUMBER, WOMEN_HELPLINE_MESSAGE));
+
+        // Find Safe Zones
+        findViewById(R.id.findSafeZonesButton).setOnClickListener(this::findSafeZones);
+
+        // Send Live Location via SMS
+        findViewById(R.id.shareLocationButton).setOnClickListener(this::sendLiveLocation);
+    }
+
+    // Function to Make a Call
+    private void makeCall(String number) {
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:" + number));
+        startActivity(callIntent);
+    }
+
+    // Function to Send an SMS
+    private void sendSMS(String number, String message) {
+        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+        smsIntent.setData(Uri.parse("sms:" + number));
+        smsIntent.putExtra("sms_body", message);
+        startActivity(smsIntent);
+    }
+
+    // Function to Open Google Maps for Finding Safe Zones
+    public void findSafeZones(View view) {
+        Uri gmmIntentUri = Uri.parse("geo:0,0?q=Disaster+Relief+Shelter+OR+Emergency+Aid+Center+OR+Hospital");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps"); // Opens in Google Maps
+        startActivity(mapIntent);
+    }
+
+    // Function to Send Live Location via SMS
+    public void sendLiveLocation(View view) {
+        if (lastKnownLocation.isEmpty()) {
+            Toast.makeText(this, "Fetching location...", Toast.LENGTH_SHORT).show();
+            getLastLocation();
+        } else {
+            sendSMS(WOMEN_HELPLINE_NUMBER, "Emergency! My location: " + lastKnownLocation);
+        }
+    }
+
+    // Request Location Permission
+    private void requestLocationPermission() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_REQUEST_CODE);
+        } else {
+            getLastLocation();
+        }
+    }
+
+    // Get User's Last Known Location
+    private void getLastLocation() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            fusedLocationClient.getLastLocation()
+                    .addOnSuccessListener(this, new OnSuccessListener<Location>() {
+                        @Override
+                        public void onSuccess(Location location) {
+                            if (location != null) {
+                                lastKnownLocation = "https://maps.google.com/?q=" + location.getLatitude() + "," + location.getLongitude();
+                            } else {
+                                lastKnownLocation = "Unable to fetch location";
+                            }
+                        }
+                    });
+        }
+    }
+
+    // Handle Permission Result
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                getLastLocation();
+            } else {
+                Toast.makeText(this, "Location permission required for live location sharing", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+}
