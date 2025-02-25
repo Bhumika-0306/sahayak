@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Skills for Volunteers -->
+    <string-array name="skills_array">
+        <item>First Aid</item>
+        <item>Medical Assistance</item>
+        <item>Rescue Operations</item>
+        <item>Disaster Management</item>
+        <item>Community Support</item>
+        <item>Food Distribution</item>
+        <item>Technical Support</item>
+    </string-array>
+    <string name="SahayakAPP">SahayakAPP</string>
+</resources>
